@@ -167,7 +167,6 @@
   bottom: 15mm;
   left: 10mm;
   position: absolute;
-  z-index: 2;
 }
 .bankslip__form-item--stamp input,
 .bankslip__form-item--stamp input:focus {
@@ -180,6 +179,7 @@
   bottom: 6mm;
   left: 48mm;
   position: absolute;
+  z-index: 5;
 }
 .bankslip__form-item--date input,
 .bankslip__form-item--date input:focus {

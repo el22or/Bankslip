@@ -191,7 +191,6 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
   bottom: 15mm;
   left: 10mm;
   position: absolute;
-  z-index: 2;
 
   input,
   input:focus {
@@ -206,6 +205,8 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
   bottom: 6mm;
   left: 48mm;
   position: absolute;
+  z-index: 5;
+
 
   input,
   input:focus {
