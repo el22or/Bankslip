@@ -1,0 +1,222 @@
+.bankslip {
+  border: solid 1px #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.7mm;
+  height: 100mm;
+  line-height: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6mm;
+  position: relative;
+  width: 209mm;
+}
+.bankslip,
+.bankslip * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.bankslip:before {
+  border-right: solid 1px #000;
+  content: "";
+  display: block;
+  height: 59mm;
+  left: 104mm;
+  position: absolute;
+  top: 12.5mm;
+}
+
+.bankslip-title {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #000;
+  cursor: pointer;
+  direction: rtl;
+  font-size: 4.81mm;
+  font-weight: 600;
+  outline: none;
+  text-transform: uppercase;
+}
+
+[class*="bankslip__form-item"] label {
+  display: block;
+}
+
+[class*="bankslip__form-item"] input,
+[class*="bankslip__form-item"] textarea {
+  border: solid 1px #000;
+  font-size: 3.7mm;
+  padding: 0.5mm 2mm;
+}
+[class*="bankslip__form-item"] input,
+[class*="bankslip__form-item"] textarea, [class*="bankslip__form-item"] input:focus,
+[class*="bankslip__form-item"] textarea:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+[class*="bankslip__form-item"] input:focus,
+[class*="bankslip__form-item"] textarea:focus {
+  border-color: #000;
+  border-style: dashed;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.bankslip__field-size--xxs {
+  height: 8mm;
+  width: 14mm;
+}
+
+.bankslip__field-size--xs {
+  height: 8mm;
+  width: 14mm;
+}
+
+.bankslip__field-size--s {
+  height: 8mm;
+  width: 52mm;
+}
+
+.bankslip__field-size--m {
+  height: 8mm;
+  width: 72mm;
+}
+
+.bankslip__field-size--l {
+  height: 8mm;
+  width: 93mm;
+}
+
+.bankslip__field-size--xl {
+  height: 15.5mm;
+  width: 92mm;
+}
+
+.bankslip__field-size--xxl {
+  height: 15.5mm;
+  width: 92mm;
+}
+
+.bankslip__field-size--xxxl {
+  height: 15.5mm;
+  width: 92mm;
+}
+
+[class*="bankslip__form-item"] textarea {
+  resize: none;
+}
+
+.bankslip__form-item--payer, .bankslip__form-item--purpose, .bankslip__form-item--recipient {
+  position: absolute;
+  left: 6mm;
+}
+
+[class*="bankslip__form-item"], .bankslip-title, .bankslip__form-item--value, .bankslip__form-item--code, .bankslip__form-item--currency, .bankslip__form-item--account, .bankslip__form-item--model, .bankslip__form-item--reference {
+  position: absolute;
+  right: 6mm;
+}
+
+.bankslip-title {
+  top: 5mm;
+}
+
+.bankslip__form-item--payer {
+  top: 8mm;
+}
+
+.bankslip__form-item--purpose {
+  top: 30mm;
+}
+
+.bankslip__form-item--recipient {
+  top: 52mm;
+}
+
+.bankslip__form-item--value {
+  top: 16mm;
+}
+
+.bankslip__form-item--code {
+  right: 85mm;
+  top: 11.5mm;
+  width: 14mm;
+}
+
+.bankslip__form-item--currency {
+  right: 64mm;
+  top: 16mm;
+}
+
+.bankslip__form-item--account {
+  top: 30mm;
+}
+
+.bankslip__form-item--model {
+  right: 85mm;
+  top: 45mm;
+  width: 14mm;
+}
+
+.bankslip__form-item--reference {
+  top: 49.5mm;
+}
+
+.bankslip__form-item--stamp {
+  bottom: 15mm;
+  left: 10mm;
+  position: absolute;
+  z-index: 2;
+}
+.bankslip__form-item--stamp input,
+.bankslip__form-item--stamp input:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.bankslip__form-item--date {
+  bottom: 6mm;
+  left: 48mm;
+  position: absolute;
+}
+.bankslip__form-item--date input,
+.bankslip__form-item--date input:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding-left: 8mm;
+}
+
+.bankslip__form-item--date2 {
+  bottom: 6mm;
+  left: 107mm;
+  position: absolute;
+}
+.bankslip__form-item--date2 input,
+.bankslip__form-item--date2 input:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+  }
+}
