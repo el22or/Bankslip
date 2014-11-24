@@ -27,23 +27,15 @@
 }
 
 .bankslip-title {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: none;
-  border: none;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
   color: #000;
-  cursor: pointer;
-  direction: rtl;
   font-size: 4.81mm;
   font-weight: 600;
-  outline: none;
   text-transform: uppercase;
 }
 
+[class*="bankslip__form-item"] {
+  z-index: 10;
+}
 [class*="bankslip__form-item"] label {
   display: block;
 }
@@ -51,6 +43,7 @@
 [class*="bankslip__form-item"] input,
 [class*="bankslip__form-item"] textarea {
   border: solid 1px #000;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3.7mm;
   padding: 0.5mm 2mm;
 }
@@ -120,13 +113,13 @@
   left: 6mm;
 }
 
-[class*="bankslip__form-item"], .bankslip-title, .bankslip__form-item--value, .bankslip__form-item--code, .bankslip__form-item--currency, .bankslip__form-item--account, .bankslip__form-item--model, .bankslip__form-item--reference {
+.bankslip-title, .bankslip__form-item--value, .bankslip__form-item--code, .bankslip__form-item--currency, .bankslip__form-item--account, .bankslip__form-item--model, .bankslip__form-item--reference {
   position: absolute;
   right: 6mm;
 }
 
 .bankslip-title {
-  top: 5mm;
+  top: 6mm;
 }
 
 .bankslip__form-item--payer {

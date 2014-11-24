@@ -71,20 +71,11 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
 }
 
 .bankslip-title {
-  -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-  background: none;
-  border: none;
-  @include border-radius(0);
   color: $color;
-  cursor: pointer;
-  direction: rtl;
   font: {
     size: 1.3 * $font-size;
     weight: 600;
   }
-  outline: none;
   text-transform: uppercase;
 
 }
@@ -93,12 +84,17 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
   label {
     display: block;
   }
+
+  z-index: 10;
 }
 
 // PLACEHOLDERS
 %field {
   border: solid 1px $border-color;
-  font-size: 1 * $font-size;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    size: 1 * $font-size;
+  }
   padding: 0.5mm 2mm;
 
   &,
@@ -145,16 +141,10 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
   right: 6mm;
 }
 
-[class*="bankslip__form-item"] {
-  @extend %bankslip__form-item--right;
-  // top: 70mm;
-}
-
 .bankslip-title {
   @extend %bankslip__form-item--right;
-  top: 5mm;
+  top: 6mm;
 }
-
 
 .bankslip__form-item--payer {
   @extend %bankslip__form-item--left;
