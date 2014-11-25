@@ -1,11 +1,17 @@
+.bankslip__wrapper {
+  margin-top: 30mm;
+  marks: cross cross;
+}
+
 .bankslip {
   border: solid 1px #000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3.7mm;
+  font-size: 3mm;
   height: 100mm;
   line-height: 1.2em;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   padding: 6mm;
   position: relative;
   width: 209mm;
@@ -16,19 +22,32 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.bankslip:before {
+
+.bankslip__inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bankslip__inner:before {
   border-right: solid 1px #000;
   content: "";
   display: block;
-  height: 59mm;
+  height: 73mm;
   left: 104mm;
   position: absolute;
-  top: 12.5mm;
+  top: 14mm;
+}
+@media print {
+  .bankslip__inner {
+    background-color: transparent;
+  }
 }
 
 .bankslip-title {
   color: #000;
-  font-size: 4.81mm;
+  font-size: 4.95mm;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -38,13 +57,16 @@
 }
 [class*="bankslip__form-item"] label {
   display: block;
+  padding-bottom: 1mm;
 }
 
 [class*="bankslip__form-item"] input,
 [class*="bankslip__form-item"] textarea {
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   border: solid 1px #000;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3.7mm;
+  font-size: 3.9mm;
   padding: 0.5mm 2mm;
 }
 [class*="bankslip__form-item"] input,
@@ -63,45 +85,53 @@
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+[class*="bankslip__form-item"] input.bankslip-border-double,
+[class*="bankslip__form-item"] textarea.bankslip-border-double {
+  border-width: 0.7mm;
+}
+[class*="bankslip__form-item"] input.bankslip-border-double:focus,
+[class*="bankslip__form-item"] textarea.bankslip-border-double:focus {
+  border-width: 1px;
+}
 
 .bankslip__field-size--xxs {
-  height: 8mm;
-  width: 14mm;
+  height: 7mm;
+  width: 12mm;
 }
 
 .bankslip__field-size--xs {
-  height: 8mm;
-  width: 14mm;
+  height: 7mm;
+  width: 12mm;
 }
 
 .bankslip__field-size--s {
-  height: 8mm;
-  width: 52mm;
+  height: 7mm;
+  width: 51mm;
 }
 
 .bankslip__field-size--m {
-  height: 8mm;
-  width: 72mm;
+  height: 7mm;
+  width: 71mm;
 }
 
 .bankslip__field-size--l {
-  height: 8mm;
+  height: 7mm;
   width: 93mm;
 }
 
 .bankslip__field-size--xl {
-  height: 15.5mm;
-  width: 92mm;
+  height: 7mm;
+  width: 88.5mm;
 }
 
 .bankslip__field-size--xxl {
-  height: 15.5mm;
-  width: 92mm;
+  height: 7mm;
+  width: 91mm;
 }
 
 .bankslip__field-size--xxxl {
-  height: 15.5mm;
-  width: 92mm;
+  height: 15mm;
+  width: 91mm;
 }
 
 [class*="bankslip__form-item"] textarea {
@@ -115,57 +145,66 @@
 
 .bankslip-title, .bankslip__form-item--value, .bankslip__form-item--code, .bankslip__form-item--currency, .bankslip__form-item--account, .bankslip__form-item--model, .bankslip__form-item--reference {
   position: absolute;
-  right: 6mm;
+  right: 5.5mm;
 }
 
 .bankslip-title {
-  top: 6mm;
+  right: 6mm;
+  top: 6.5mm;
 }
 
 .bankslip__form-item--payer {
-  top: 8mm;
+  top: 9.5mm;
 }
 
 .bankslip__form-item--purpose {
-  top: 30mm;
+  top: 30.5mm;
+}
+.bankslip__form-item--purpose textarea {
+  height: 14.5mm;
 }
 
 .bankslip__form-item--recipient {
-  top: 52mm;
+  top: 51mm;
 }
 
 .bankslip__form-item--value {
-  top: 16mm;
+  top: 13.5mm;
 }
 
 .bankslip__form-item--code {
-  right: 85mm;
-  top: 11.5mm;
+  right: 80mm;
+  top: 10.5mm;
   width: 14mm;
 }
 
 .bankslip__form-item--currency {
   right: 64mm;
-  top: 16mm;
+  top: 13.5mm;
+}
+.bankslip__form-item--currency input {
+  width: 12.5mm;
 }
 
 .bankslip__form-item--account {
-  top: 30mm;
+  top: 27mm;
 }
 
 .bankslip__form-item--model {
-  right: 85mm;
-  top: 45mm;
-  width: 14mm;
+  right: 83.5mm;
+  top: 40.5mm;
+}
+.bankslip__form-item--model input {
+  width: 10.5mm;
 }
 
 .bankslip__form-item--reference {
-  top: 49.5mm;
+  top: 40.5mm;
 }
 
 .bankslip__form-item--stamp {
-  bottom: 15mm;
-  left: 10mm;
+  bottom: 16.5mm;
+  left: 6mm;
   position: absolute;
 }
 .bankslip__form-item--stamp input,
@@ -173,11 +212,14 @@
   border-left: none;
   border-right: none;
   border-top: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 .bankslip__form-item--date {
-  bottom: 6mm;
-  left: 48mm;
+  bottom: 8mm;
+  left: 49mm;
   position: absolute;
   z-index: 5;
 }
@@ -186,12 +228,17 @@
   border-left: none;
   border-right: none;
   border-top: none;
-  padding-left: 8mm;
+}
+.bankslip__form-item--date input {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  width: 48mm;
 }
 
 .bankslip__form-item--date2 {
-  bottom: 6mm;
-  left: 107mm;
+  bottom: 8mm;
+  left: 115mm;
   position: absolute;
 }
 .bankslip__form-item--date2 input,
@@ -199,6 +246,32 @@
   border-left: none;
   border-right: none;
   border-top: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.bankslip__form-number {
+  bottom: 3.5mm;
+  font-size: 2.4mm;
+  left: 96mm;
+  position: absolute;
+}
+
+.bankslip__number {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  bottom: 3.5mm;
+  cursor: pointer;
+  font-size: 2.7mm;
+  outline: none;
+  right: 5mm;
+  padding: 1mm 0;
+  position: absolute;
+  text-align: center;
+  width: 3mm;
 }
 
 @page {

@@ -9,56 +9,57 @@
 <body>
   <div class="bankslip__wrapper">
     <form id="bankslip" class="bankslip">
+      <div class="bankslip__inner">
       
       <div class="bankslip-title">Налог за уплату</div>
 
       <div class="bankslip__form-item--payer">
         <label>уплатилац</label>
-        <textarea name="" class="bankslip__field-size--xxl"></textarea>
+        <textarea name="" class="bankslip__field-size--xxxl"></textarea>
       </div>
       
       <div class="bankslip__form-item--purpose">
         <label>сврха уплате</label>
-        <textarea name="" class="bankslip__field-size--xxl"></textarea>
+        <textarea name="" class="bankslip__field-size--xxxl"></textarea>
       </div>
 
       <div class="bankslip__form-item--recipient">
         <label>прималац</label>
-        <textarea name="" class="bankslip__field-size--xxl"></textarea>
+        <textarea name="" class="bankslip__field-size--xxxl"></textarea>
       </div>
 
       <div class="bankslip__form-item--code">
         <label>шифра плаћања</label>
-        <input type="text" name="" class="bankslip__field-size--xxs">
+        <input type="text" name="" class="bankslip__field-size--xxs bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--currency">
         <label>валута</label>
-        <input type="text" name="" class="bankslip__field-size--xxs">
+        <input type="text" name="" class="bankslip__field-size--xxs bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--value">
         <label>износ</label>
-        <input type="text" name="" class="bankslip__field-size--s">
+        <input type="text" name="" class="bankslip__field-size--s bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--account">
         <label>рачун примаоца</label>
-        <input type="text" name="" class="bankslip__field-size--l">
+        <input type="text" name="" class="bankslip__field-size--xl bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--model">
-        <label>број модела</label>
-        <input type="text" name="" class="bankslip__field-size--xxs">
+        <label>модел</label>
+        <input type="text" name="" class="bankslip__field-size--xxs bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--reference">
         <label>позив на број (одобрење)</label>
-        <input type="text" name="" class="bankslip__field-size--m">
+        <input type="text" name="" class="bankslip__field-size--m bankslip-border-double">
       </div>
 
       <div class="bankslip__form-item--stamp">
-        <input type="text" name="" class="bankslip__field-size--m">
+        <input type="text" name="" class="bankslip__field-size--s">
         <label>потпис и печат уплатиоца</label>
       </div>
 
@@ -72,6 +73,10 @@
         <label>датум валуте</label>
       </div>
 
+      <span class="bankslip__form-number">Образац бр. 1</span>
+      <input type="text" class="bankslip__number" size="1" value="1">
+        
+    </div><!-- /.bankslip__inner -->
     </form>
   </div>
 </body>
