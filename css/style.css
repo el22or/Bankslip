@@ -216,6 +216,10 @@
   -webkit-border-radius: 0;
   border-radius: 0;
 }
+.bankslip__form-item--stamp label {
+  padding-bottom: 0;
+  padding-top: 1mm;
+}
 
 .bankslip__form-item--date {
   bottom: 8mm;
@@ -235,6 +239,10 @@
   border-radius: 0;
   width: 48mm;
 }
+.bankslip__form-item--date label {
+  padding-bottom: 0;
+  padding-top: 1mm;
+}
 
 .bankslip__form-item--date2 {
   bottom: 8mm;
@@ -249,6 +257,10 @@
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+.bankslip__form-item--date2 label {
+  padding-bottom: 0;
+  padding-top: 1mm;
 }
 
 .bankslip__form-number {

@@ -255,6 +255,12 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
     }
     @include border-radius(0);
   }
+  label {
+    padding: {
+      bottom: 0;
+      top: 1mm;
+    }
+  }
 }
 .bankslip__form-item--date {
   bottom: 8mm;
@@ -276,6 +282,12 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
     @include border-radius(0);
     width: 48mm;
   }
+  label {
+    padding: {
+      bottom: 0;
+      top: 1mm;
+    }
+  }
 }
 .bankslip__form-item--date2 {
   bottom: 8mm;
@@ -290,6 +302,12 @@ $sizes: xxs, xs, s, m, l, xl, xxl, xxxl;
       top: none;
     }
     @include border-radius(0);
+  }
+  label {
+    padding: {
+      bottom: 0;
+      top: 1mm;
+    }
   }
 }
 
